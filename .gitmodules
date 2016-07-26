@@ -1,0 +1,3 @@
+[submodule "src/External"]
+	path = src/External
+	url = git@github.com:lsmaker/LSMakerModule.git
