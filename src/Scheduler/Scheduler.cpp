@@ -10,11 +10,11 @@ void Scheduler::init(void){
   //Disable Interrupts
   cli();
 
-  TCCR1A = 0;     //Clear Timer1 configuration bits
-  TCCR1B = 0;     //Clear Timer1 configuration bits
+  //TCCR1A = 0;     //Clear Timer1 configuration bits
+  //TCCR1B = 0;     //Clear Timer1 configuration bits
 
   //Set the Timer1 pre-scaler to System Clock / 8
-  TCCR1B |= (1 << (CS01));
+  TCCR1B |= (1 << (CS11));
 
   //Enable Timer1 overflow interrupts
   TIMSK1 |= (1 << (TOIE2));
