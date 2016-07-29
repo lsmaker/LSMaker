@@ -4,14 +4,19 @@ This is the source code of the basic LSMaker Arduino software.
 ## Methods
 
 - `void init(void)`:
+
 **Description**: This procedure performs the basic initializations needed by the LSMaker Arduino platform. It is important that this method is **ALWAYS** called at the very beginning of your project's `void setup()` procedure.
 
 - `bool addModule(LSMakerModule *module, unsigned long period = 0)`: 
+
 **Description**: This method subscribes the LSMakerModule instance received to the LSMaker system scheduler. If no period value is provided the LSMaker scheduler will call the module's *execute()* module as soon as possible (62.5us). Otherwise, if period value is provided (in microseconds), the LSMaker scheduler will call the *execute()* method when the period time has passed since the last call to the module's *execute()* method.
+
 **Return value**: True is returned if the module has been successfully subscribed to the LSMaker scheduler. Otherwise, false is returned.
 
 - `bool removeModule(LSMakerModule *module)`:
+
 **Description**: This method checks if the LSMakerModule instance received is currently attached to LSMaker scheduler. If so, the instance is removed. Otherwise, no operation is performed.
+
 **Return value**: True is returned if the moudle has been successfully removed from the LSMaker scheduler. Otherwise, false is returned.
 
 ## Classes
