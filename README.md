@@ -9,7 +9,7 @@ This is the source code of the basic LSMaker Arduino software.
 
 - `bool addModule(LSMakerModule *module, unsigned long period = 0)`: 
 
-**Description**: This method subscribes the LSMakerModule instance received to the LSMaker system scheduler. If no period value is provided the LSMaker scheduler will call the module's *execute()* module as soon as possible (62.5us). Otherwise, if period value is provided (in microseconds), the LSMaker scheduler will call the *execute()* method when the period time has passed since the last call to the module's *execute()* method.
+**Description**: This method subscribes the LSMakerModule instance received to the LSMaker system scheduler. If no period value is provided the LSMaker scheduler will call the module's *execute()* module as soon as possible (62.5us). Otherwise, if period value is provided (in microseconds), the LSMaker scheduler will call the *execute()* method when the elapsed time since the last call to the module's *execute()* method is bigger or equals than the period value.
 
 **Return value**: True is returned if the module has been successfully subscribed to the LSMaker scheduler. Otherwise, false is returned.
 
