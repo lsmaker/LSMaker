@@ -1,6 +1,21 @@
 # LSMaker
 This is the source code of the basic LSMaker Arduino software.
 
+## Download
+[LSMaker.zip](https://github.com/lsmaker/lsmaker/releases/download/0.1a/LSMaker.zip)
+
+## Clone
+
+**Using SSH**
+```
+git clone --recursive git@github.com:lsmaker/LSMaker.git LSMaker
+```
+
+**Using HTTPS**
+```
+git clone --recursive https://github.com/lsmaker/LSMaker.git LSMaker
+```
+
 ## Methods
 
 - `void init(void)`:
