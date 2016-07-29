@@ -10,14 +10,14 @@ void Scheduler::init(void){
   //Disable Interrupts
   cli();
 
-  //Set the Timer1 pre-scaler to System Clock / 8
-  TCCR1B |= (1 << (CS11));
+  TCCR1A = 0x00;
+  TCCR1B = 0x01;
 
   //Enable Timer1 overflow interrupts
-  TIMSK1 |= (1 << (TOIE2));
+  TIMSK1 |= (1 << (TOIE1));
 
   //Set the Timer1 value to count 62.5uS
-  TCNT1 = 124;
+  TCNT1 = 64536;
 
   //Enable interrupts
   sei();
@@ -92,6 +92,6 @@ void TIMER1_OVF_vect(void){
   }
 
   //Re-load the Timer1 value to force new overflow after 62.5uS
-  TCNT2 = 124;
+  TCNT1 = 64535;
 
 }

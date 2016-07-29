@@ -2,7 +2,7 @@
 
 Task::Task(LSMakerModule *module, unsigned long period){
     this->period = period;
-    this->lastExecution = millis();
+    this->lastExecution = micros();
     this->module = module;
     this->init();
 }
@@ -28,9 +28,9 @@ void Task::execute(void){
         //than the user-specified period we should call again the module's
         //execute() method and update the lastExecution timestamp. Otherwise,
         //no operation should be performed.
-        if((millis() - this->lastExecution) >= this->period){
+        if((micros() - this->lastExecution) >= this->period){
             this->module->execute();
-            this->lastExecution = millis();
+            this->lastExecution = micros();
         }
 
     }
