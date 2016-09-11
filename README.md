@@ -2,7 +2,7 @@
 This is the source code of the basic LSMaker Arduino software.
 
 ## Download
-[LSMaker.zip](https://github.com/lsmaker/lsmaker/releases/download/1.0/LSMaker.zip)
+[LSMaker.zip](https://github.com/lsmaker/lsmaker/releases/download/1.1/LSMaker.zip)
 
 ## Clone
 

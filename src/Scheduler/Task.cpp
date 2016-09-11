@@ -1,5 +1,7 @@
 #include "Task.h"
 
+using namespace LSM;
+
 Task::Task(LSMakerModule *module, unsigned long period){
     this->period = period;
     this->lastExecution = micros();

@@ -1,5 +1,7 @@
 #include "Scheduler.h"
 
+using namespace LSM;
+
 LinkedList<Task *> * Scheduler::tasks = NULL;
 
 void Scheduler::init(void){

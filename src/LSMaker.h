@@ -18,15 +18,18 @@
 #include "External/LSMakerModule.h"
 #include "Collections/LinkedList.h"
 
-class LSMaker{
+namespace LSM{
+    
+    class LSMaker{
 
-    public:
-        static void init(void);
+        public:
+            static void init(void);
 
-    public:
-        static bool addModule(LSMakerModule *module, unsigned long period = 0);
-        static bool removeModule(LSMakerModule *module);
-};
+        public:
+            static bool addModule(LSMakerModule *module, unsigned long period = 0);
+            static bool removeModule(LSMakerModule *module);
+    };
 
+}
 
 #endif

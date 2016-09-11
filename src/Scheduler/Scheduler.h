@@ -25,19 +25,23 @@ extern "C" {
     void TIMER1_OVF_vect(void) __attribute__ ((signal));
 };
 
-class Scheduler{
+namespace LSM{
 
-    private:
-        static LinkedList<Task *> *tasks;
+    class Scheduler{
 
-    public:
-        static void init(void);
-        static bool addTask(LSMakerModule *module, unsigned long period);
-        static bool removeTask(LSMakerModule *module);
-        friend void TIMER1_OVF_vect (void);
+        private:
+            static LinkedList<Task *> *tasks;
 
-    private:
-        static bool exists(LSMakerModule *module);
-};
+        public:
+            static void init(void);
+            static bool addTask(LSMakerModule *module, unsigned long period);
+            static bool removeTask(LSMakerModule *module);
+            friend void ::TIMER1_OVF_vect (void);
+
+        private:
+            static bool exists(LSMakerModule *module);
+    };
+
+}
 
 #endif

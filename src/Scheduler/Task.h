@@ -10,27 +10,31 @@
  *  wrapper.
 ***/
 
-#ifndef _LSMAKER_SCHEDULER_TASK_H_
-#define _LSMAKER_SCHEDULER_TASK_H_
+#ifndef _LSM_SCHEDULER_TASK_H_
+#define _LSM_SCHEDULER_TASK_H_
 
 #include <Arduino.h>
 #include "../External/LSMakerModule.h"
 
-class Task{
+namespace LSM{
 
-    private:
-        unsigned long period = 0;
-        unsigned long lastExecution = 0;
-        LSMakerModule *module = NULL;
+    class Task{
 
-    private:
-        void init(void);
+        private:
+            unsigned long period = 0;
+            unsigned long lastExecution = 0;
+            LSMakerModule *module = NULL;
 
-    public:
-        Task(LSMakerModule *module, unsigned long period = 0);
-        void execute(void);
-        void destroy(void);
-        bool compare(LSMakerModule *module);
-};
+        private:
+            void init(void);
+
+        public:
+            Task(LSMakerModule *module, unsigned long period = 0);
+            void execute(void);
+            void destroy(void);
+            bool compare(LSMakerModule *module);
+    };
+
+}
 
 #endif

@@ -1,5 +1,7 @@
 #include "LSMaker.h"
 
+using namespace LSM;
+
 //Internal classes includes
 #include "Scheduler/Scheduler.h"
 
