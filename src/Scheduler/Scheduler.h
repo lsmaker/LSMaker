@@ -9,8 +9,8 @@
  *  modules from the scheduler task list in runtime.
 ***/
 
-#ifndef _LSMAKER_SCHEDULER_H_
-#define _LSMAKER_SCHEDULER_H_
+#ifndef _LSM_LSMAKER_SCHEDULER_H_
+#define _LSM_LSMAKER_SCHEDULER_H_
 
 //System includes
 #include <Arduino.h>

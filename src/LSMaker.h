@@ -8,8 +8,8 @@
  *  LSMaker scheduler.
 ***/
 
-#ifndef _LSMAKER_H_
-#define _LSMAKER_H_
+#ifndef _LSM_LSMAKER_H_
+#define _LSM_LSMAKER_H_
 
 //Arduino Library include
 #include <Arduino.h>

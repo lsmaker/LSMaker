@@ -6,8 +6,8 @@
  *	can hold any type of data.
 ***/
 
-#ifndef _LSMAKER_COLLECTIONS_LINKEDLIST_H_
-#define _LSMAKER_COLLECTIONS_LINKEDLIST_H_
+#ifndef _LSM_LSMAKER_COLLECTIONS_LINKEDLIST_H_
+#define _LSM_LSMAKER_COLLECTIONS_LINKEDLIST_H_
 
 template <class T> class LinkedList{
 

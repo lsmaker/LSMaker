@@ -10,8 +10,8 @@
  *  wrapper.
 ***/
 
-#ifndef _LSM_SCHEDULER_TASK_H_
-#define _LSM_SCHEDULER_TASK_H_
+#ifndef _LSM_LSMAKER_SCHEDULER_TASK_H_
+#define _LSM_LSMAKER_SCHEDULER_TASK_H_
 
 #include <Arduino.h>
 #include "../External/LSMakerModule.h"
